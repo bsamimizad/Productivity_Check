@@ -85,7 +85,7 @@ fi
 echo "processing the files..." 
 # Deleting old files (all except screenshots of today and bash scripts)
 #files=($(find . -type f -name '*.png')) 
-oldfiles=($(find . -type f -not \( -iname "*${today}*" -o -iname "*.sh" -o -path "./third_party/*" \)))
+oldfiles=($(find . -type f -not \( -iname "*${today}*" -o -iname "*.sh" -o -iname ".gitignore" -o -path "*/.git/*" -o -path "./third_party/*" \)))
 printf "%s\n" "${files[@]}"
 printf "%s\n" "${oldfiles[@]}"
 # Ask for confirmation
